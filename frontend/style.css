@@ -1,0 +1,286 @@
+/* --- VARIABLES Y RESET --- */
+:root {
+    --blue: #1A44FF;
+    --yellow: #FFD400;
+    --red: #E60000;
+    --black: #000000;
+    --white: #FFFFFF;
+    --grey-light: #EFEFEF;
+    --grey-dark: #333333;
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--black);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+/* Utilidades */
+.uppercase { text-transform: uppercase; }
+.text-center { text-align: center; }
+.border-bottom { border-bottom: 2px solid var(--black); }
+.border-right { border-right: 2px solid var(--black); }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 60vh;
+    background-image: url('https://images.unsplash.com/photo-1516873240891-4bf014598ab4?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--black);
+}
+
+.brand-banner {
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--black);
+    letter-spacing: 5px;
+}
+
+/* --- FECHAS DISPONIBLES --- */
+.dates-section {
+    display: flex;
+    background-color: var(--grey-dark);
+    color: var(--white);
+    border-bottom: 2px solid var(--black);
+}
+
+.dates-left {
+    flex: 2;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dates-left h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+.dates-right {
+    flex: 1;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 3rem;
+    border-left: 2px solid var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* --- EVENTOS SECTION --- */
+.section-header {
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid var(--black);
+    letter-spacing: 2px;
+}
+
+.event-row {
+    display: flex;
+    border-bottom: 2px solid var(--black);
+    background-color: var(--grey-light);
+    min-height: 120px;
+}
+
+.event-name {
+    flex: 2;
+    padding: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid var(--black);
+}
+
+.event-details {
+    flex: 1;
+    background-color: var(--yellow);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.event-btn {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* --- SERVICIOS & LINEUP --- */
+.lineup-section {
+    background-color: var(--grey-light);
+    color: var(--black);
+}
+
+.tier-header {
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid var(--black);
+}
+
+.lineup-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    border-bottom: 2px solid var(--black);
+}
+
+.time-slot {
+    padding: 1rem;
+    border-right: 2px solid var(--black);
+    font-weight: bold;
+    border-bottom: 1px solid var(--black);
+}
+
+.artist-slot {
+    padding: 1rem;
+    border-bottom: 1px solid var(--black);
+}
+
+/* --- PRECIOS & COTIZAR --- */
+.precios-banner {
+    background-color: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 2px solid var(--black);
+    position: relative;
+}
+
+.precios-banner h2 {
+    font-family: var(--font-main);
+    font-size: 3rem;
+    text-decoration: line-through;
+    letter-spacing: 2px;
+}
+
+.cotizar-banner {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-bottom: 2px solid var(--black);
+}
+
+.cotizar-banner h2 {
+    font-family: var(--font-main);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* --- NEWSLETTER & FOOTER --- */
+.newsletter-section {
+    background-color: #111;
+    color: var(--white);
+    display: flex;
+    padding: 4rem 2rem;
+    border-bottom: 2px solid var(--black);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newsletter-section h3 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.footer {
+    background-color: #555;
+    color: var(--white);
+    padding: 4rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    line-height: 2;
+}
+
+.footer-logo {
+    font-family: var(--font-main);
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.rights {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {
+    .dates-section {
+        flex-direction: column;
+    }
+    .dates-left, .dates-right {
+        border-right: none;
+        border-bottom: 2px solid var(--black);
+        border-left: none;
+    }
+    .event-row {
+        flex-direction: column;
+    }
+    .event-name {
+        border-right: none;
+        border-bottom: 2px solid var(--black);
+        padding: 3rem 2rem;
+    }
+    .event-details {
+        border-bottom: 2px solid var(--black);
+    }
+    .event-btn {
+        padding: 1.5rem;
+    }
+    .newsletter-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
